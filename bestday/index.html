@@ -26,30 +26,32 @@
 
         <div class="carousel">
             <div class="carousel-track">
-                <div class="carousel-slide" onclick="openLightbox('img/work1.jpg')">
+                <div class="carousel-slide" onclick="openLightbox(0)">
                     <img src="img/work1.jpg" alt="Работа 1">
                 </div>
-                <div class="carousel-slide" onclick="openLightbox('img/work2.jpg')">
+                <div class="carousel-slide" onclick="openLightbox(1)">
                     <img src="img/work2.jpg" alt="Работа 2">
                 </div>
-                <div class="carousel-slide" onclick="openLightbox('img/work3.jpg')">
+                <div class="carousel-slide" onclick="openLightbox(2)">
                     <img src="img/work3.jpg" alt="Работа 3">
                 </div>
-                <div class="carousel-slide" onclick="openLightbox('img/work4.jpg')">
+                <div class="carousel-slide" onclick="openLightbox(3)">
                     <img src="img/work4.jpg" alt="Работа 4">
                 </div>
-                <div class="carousel-slide" onclick="openLightbox('img/work5.jpg')">
+                <div class="carousel-slide" onclick="openLightbox(4)">
                     <img src="img/work5.jpg" alt="Работа 5">
                 </div>
-                <div class="carousel-slide" onclick="openLightbox('img/work6.jpg')">
+                <div class="carousel-slide" onclick="openLightbox(5)">
                     <img src="img/work6.jpg" alt="Работа 6">
                 </div>
             </div>
         </div>
 
         <div class="lightbox" id="lightbox" onclick="closeLightbox()">
+            <span class="lightbox-close" onclick="closeLightbox()">&times;</span>
+            <span class="lightbox-prev" onclick="changeSlide(event, -1)">&#10094;</span>
             <img id="lightbox-img" src="" alt="">
-            <span class="lightbox-close">&times;</span>
+            <span class="lightbox-next" onclick="changeSlide(event, 1)">&#10095;</span>
         </div>
 
         <div class="discounts" data-decor="🎁">

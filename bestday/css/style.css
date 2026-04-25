@@ -230,6 +230,26 @@ main {
     font-size: 40px;
     color: white;
     cursor: pointer;
+    z-index: 1001;
+}
+
+.lightbox-prev, .lightbox-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 40px;
+    color: white;
+    cursor: pointer;
+    padding: 15px;
+    background: rgba(255,255,255,0.2);
+    border-radius: 50%;
+}
+
+.lightbox-prev { left: 20px; }
+.lightbox-next { right: 20px; }
+
+.lightbox-prev:hover, .lightbox-next:hover {
+    background: rgba(255,255,255,0.4);
 }
 
 .decor {

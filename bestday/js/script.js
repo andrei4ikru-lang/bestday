@@ -41,13 +41,25 @@ function initCarousel() {
     setInterval(autoScroll, 50);
 }
 
-function openLightbox(src) {
+let currentSlide = 0;
+const slides = ['work1.jpg', 'work2.jpg', 'work3.jpg', 'work4.jpg', 'work5.jpg', 'work6.jpg'];
+
+function openLightbox(index) {
+    currentSlide = index;
     const lb = document.getElementById('lightbox');
     const img = document.getElementById('lightbox-img');
-    img.src = src;
+    img.src = 'img/' + slides[currentSlide];
     lb.classList.add('active');
 }
 
 function closeLightbox() {
     document.getElementById('lightbox').classList.remove('active');
+}
+
+function changeSlide(event, direction) {
+    event.stopPropagation();
+    currentSlide += direction;
+    if (currentSlide < 0) currentSlide = slides.length - 1;
+    if (currentSlide >= slides.length) currentSlide = 0;
+    document.getElementById('lightbox-img').src = 'img/' + slides[currentSlide];
 }
