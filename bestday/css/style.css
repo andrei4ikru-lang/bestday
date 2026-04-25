@@ -226,8 +226,8 @@ main {
     transform: translateY(-50%) scale(1.15);
 }
 
-.carousel-arrow-left { left: 40px; }
-.carousel-arrow-right { right: 40px; }
+.carousel-arrow-left { left: -30px; }
+.carousel-arrow-right { right: -30px; }
 
 .carousel-track {
     display: flex;
