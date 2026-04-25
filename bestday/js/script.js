@@ -26,19 +26,13 @@ function getRandomColor() {
 function initCarousel() {
     const track = document.querySelector('.carousel-track');
     if (!track) return;
-    
-    let scrollPos = 0;
-    const scrollSpeed = 1;
-    
-    function autoScroll() {
-        scrollPos += scrollSpeed;
-        if (scrollPos >= track.scrollWidth - track.clientWidth) {
-            scrollPos = 0;
-        }
-        track.scrollLeft = scrollPos;
-    }
-    
-    setInterval(autoScroll, 50);
+}
+
+function scrollCarousel(direction) {
+    const track = document.querySelector('.carousel-track');
+    if (!track) return;
+    const slideWidth = 400;
+    track.scrollBy({ left: direction * slideWidth, behavior: 'smooth' });
 }
 
 function scrollCarousel(direction) {
