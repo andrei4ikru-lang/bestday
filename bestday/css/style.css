@@ -295,16 +295,16 @@ main {
 }
 
 .carousel-slide {
-    flex: 0 0 320px;
+    flex: 0 0 400px;
     scroll-snap-align: center;
-    border-radius: 16px;
+    border-radius: 20px;
     overflow: hidden;
     position: relative;
 }
 
 .carousel-slide img {
     width: 100%;
-    height: 300px;
+    height: 380px;
     object-fit: cover;
     display: block;
     cursor: pointer;
@@ -727,20 +727,21 @@ footer p {
     .hero::before, .hero::after { display: none; }
     
     .carousel-slide {
-        flex: 0 0 85vw;
+        flex: 0 0 90vw;
     }
     
     .carousel-slide img {
-        height: 60vw;
+        height: 70vw;
+        max-height: 300px;
     }
     
     .carousel-arrow {
-        font-size: 24px;
-        padding: 6px 10px;
+        font-size: 28px;
+        padding: 8px 12px;
     }
     
-    .carousel-arrow-left { left: -10px; }
-    .carousel-arrow-right { right: -10px; }
+    .carousel-arrow-left { left: -5px; }
+    .carousel-arrow-right { right: -5px; }
     
     .about-full h2 { font-size: 1.3rem; }
     .events-grid span, .bonus-grid span, .extra-grid span {
