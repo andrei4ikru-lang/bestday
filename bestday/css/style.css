@@ -167,8 +167,7 @@ main {
     content: '';
     position: absolute;
     top: -18px;
-    left: 50%;
-    transform: translateX(-50%);
+    left: 20px;
     width: 42px;
     height: 42px;
     display: flex;
