@@ -29,7 +29,6 @@ function initCarousel() {
     
     let scrollPos = 0;
     const scrollSpeed = 1;
-    const interval = 50;
     
     function autoScroll() {
         scrollPos += scrollSpeed;
@@ -39,13 +38,16 @@ function initCarousel() {
         track.scrollLeft = scrollPos;
     }
     
-    setInterval(autoScroll, interval);
-    
-    track.addEventListener('mouseenter', () => {
-        track.style.animationPlayState = 'paused';
-    });
-    
-    track.addEventListener('mouseleave', () => {
-        track.style.animationPlayState = 'running';
-    });
+    setInterval(autoScroll, 50);
+}
+
+function openLightbox(src) {
+    const lb = document.getElementById('lightbox');
+    const img = document.getElementById('lightbox-img');
+    img.src = src;
+    lb.classList.add('active');
+}
+
+function closeLightbox() {
+    document.getElementById('lightbox').classList.remove('active');
 }

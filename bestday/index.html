@@ -26,25 +26,30 @@
 
         <div class="carousel">
             <div class="carousel-track">
-                <div class="carousel-slide">
+                <div class="carousel-slide" onclick="openLightbox('img/work1.jpg')">
                     <img src="img/work1.jpg" alt="Работа 1">
                 </div>
-                <div class="carousel-slide">
+                <div class="carousel-slide" onclick="openLightbox('img/work2.jpg')">
                     <img src="img/work2.jpg" alt="Работа 2">
                 </div>
-                <div class="carousel-slide">
+                <div class="carousel-slide" onclick="openLightbox('img/work3.jpg')">
                     <img src="img/work3.jpg" alt="Работа 3">
                 </div>
-                <div class="carousel-slide">
+                <div class="carousel-slide" onclick="openLightbox('img/work4.jpg')">
                     <img src="img/work4.jpg" alt="Работа 4">
                 </div>
-                <div class="carousel-slide">
+                <div class="carousel-slide" onclick="openLightbox('img/work5.jpg')">
                     <img src="img/work5.jpg" alt="Работа 5">
                 </div>
-                <div class="carousel-slide">
+                <div class="carousel-slide" onclick="openLightbox('img/work6.jpg')">
                     <img src="img/work6.jpg" alt="Работа 6">
                 </div>
             </div>
+        </div>
+
+        <div class="lightbox" id="lightbox" onclick="closeLightbox()">
+            <img id="lightbox-img" src="" alt="">
+            <span class="lightbox-close">&times;</span>
         </div>
 
         <div class="discounts" data-decor="🎁">
