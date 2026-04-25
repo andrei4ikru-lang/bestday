@@ -186,25 +186,24 @@ main {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    font-size: 36px;
-    color: white;
+    font-size: 40px;
+    color: var(--pink);
     cursor: pointer;
-    padding: 15px 18px;
-    background: linear-gradient(135deg, var(--pink), var(--pink-light));
-    border-radius: 50%;
+    padding: 5px 12px;
+    background: transparent;
     user-select: none;
     z-index: 10;
-    box-shadow: 0 4px 15px rgba(255, 64, 129, 0.4);
     transition: all 0.3s ease;
+    line-height: 1;
 }
 
 .carousel-arrow:hover {
-    transform: translateY(-50%) scale(1.1);
-    box-shadow: 0 6px 25px rgba(255, 64, 129, 0.6);
+    color: var(--pink-light);
+    transform: translateY(-50%) scale(1.2);
 }
 
-.carousel-arrow-left { left: -10px; }
-.carousel-arrow-right { right: -10px; }
+.carousel-arrow-left { left: -5px; }
+.carousel-arrow-right { right: -5px; }
 
 .carousel-track {
     display: flex;
