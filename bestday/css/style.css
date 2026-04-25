@@ -156,7 +156,7 @@ main {
 
 .discounts, .heroes, .services, .features, .extras {
     background: var(--white);
-    padding: 1.5rem;
+    padding: 2rem 1.5rem 1.5rem;
     border-radius: 24px;
     margin-bottom: 1.2rem;
     box-shadow: var(--shadow);
@@ -164,21 +164,30 @@ main {
 }
 
 .discounts::before, .heroes::before, .services::before, .features::before, .extras::before {
-    content: attr(data-decor);
+    content: '';
     position: absolute;
-    top: -15px;
-    left: 20px;
-    font-size: 2rem;
-    background: var(--white);
-    padding: 0 0.5rem;
+    top: -18px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 42px;
+    height: 42px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.6rem;
+    background: var(--pink);
+    border-radius: 50%;
+    line-height: 1;
+    z-index: 1;
 }
 
-.discounts { border: 2px solid var(--gold); }
 .discounts::before { content: '🎁'; }
 .heroes::before { content: '🧸'; }
 .services::before { content: '🎂'; }
 .features::before { content: '💝'; }
 .extras::before { content: '🎈'; }
+
+.discounts { border: 2px solid var(--gold); }
 
 h2 {
     color: var(--pink);
