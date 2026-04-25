@@ -99,14 +99,31 @@ main {
 }
 
 .hero {
-    background: var(--white);
+    background: linear-gradient(135deg, #fff0f5 0%, #ffe4ec 50%, #fff0f5 100%);
     padding: 2.5rem 2rem;
     border-radius: 30px;
     text-align: center;
     margin-bottom: 1.2rem;
     box-shadow: var(--shadow);
+    border: 3px solid var(--pink);
     position: relative;
     overflow: hidden;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(255,255,255,0.3) 0%, transparent 60%);
+    animation: shine 3s ease infinite;
+}
+
+@keyframes shine {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
 }
 
 .hero::before {
@@ -185,6 +202,20 @@ main {
     scroll-snap-align: center;
     border-radius: 12px;
     overflow: hidden;
+    position: relative;
+}
+
+.slide-price {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(135deg, var(--pink), var(--pink-light));
+    color: white;
+    padding: 8px;
+    font-weight: 700;
+    font-size: 0.9rem;
+    text-align: center;
 }
 
 .carousel-slide img {
@@ -508,12 +539,32 @@ footer p {
 
 /* Contacts */
 .contact-info {
-    background: var(--white);
+    background: linear-gradient(135deg, #fff0f5 0%, #ffe4ec 100%);
     padding: 2rem;
     border-radius: 24px;
     text-align: center;
-    margin-bottom: 1.2rem;
+    margin-bottom: 1.5rem;
     box-shadow: var(--shadow);
+    border: 3px solid var(--pink);
+}
+
+.contact-btn {
+    display: inline-block;
+    background: linear-gradient(135deg, var(--pink) 0%, var(--pink-light) 100%);
+    color: white;
+    padding: 1rem 2.5rem;
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: 800;
+    font-size: 1.2rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 20px rgba(255, 64, 129, 0.4);
+    margin: 0.5rem;
+}
+
+.contact-btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 30px rgba(255, 64, 129, 0.6);
 }
 
 .contact-info > p {
