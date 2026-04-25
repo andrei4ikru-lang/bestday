@@ -295,7 +295,7 @@ main {
 }
 
 .carousel-slide {
-    flex: 0 0 400px;
+    flex: 0 0 500px;
     scroll-snap-align: center;
     border-radius: 20px;
     overflow: hidden;
@@ -305,7 +305,7 @@ main {
 .carousel-slide img {
     width: 100%;
     height: auto;
-    max-height: 400px;
+    max-height: 450px;
     object-fit: contain;
     background: #f5f5f5;
     display: block;
