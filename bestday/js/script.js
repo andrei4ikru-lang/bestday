@@ -41,6 +41,13 @@ function initCarousel() {
     setInterval(autoScroll, 50);
 }
 
+function scrollCarousel(direction) {
+    const track = document.querySelector('.carousel-track');
+    if (!track) return;
+    const slideWidth = 200;
+    track.scrollBy({ left: direction * slideWidth, behavior: 'smooth' });
+}
+
 let currentSlide = 0;
 const slides = ['work1.jpg', 'work2.jpg', 'work3.jpg', 'work4.jpg', 'work5.jpg', 'work6.jpg'];
 

@@ -173,10 +173,38 @@ main {
     background: var(--white);
     padding: 1rem;
     border-radius: 24px;
-    margin-bottom: 1.2rem;
     box-shadow: var(--shadow);
     overflow: hidden;
 }
+
+.carousel-wrapper {
+    position: relative;
+    margin-bottom: 1.2rem;
+}
+
+.carousel-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 36px;
+    color: white;
+    cursor: pointer;
+    padding: 15px 18px;
+    background: linear-gradient(135deg, var(--pink), var(--pink-light));
+    border-radius: 50%;
+    user-select: none;
+    z-index: 10;
+    box-shadow: 0 4px 15px rgba(255, 64, 129, 0.4);
+    transition: all 0.3s ease;
+}
+
+.carousel-arrow:hover {
+    transform: translateY(-50%) scale(1.1);
+    box-shadow: 0 6px 25px rgba(255, 64, 129, 0.6);
+}
+
+.carousel-arrow-left { left: -10px; }
+.carousel-arrow-right { right: -10px; }
 
 .carousel-track {
     display: flex;
