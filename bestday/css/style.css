@@ -296,18 +296,18 @@ main {
 
 .carousel-slide {
     flex: 0 0 auto;
-    width: 100%;
-    max-width: 600px;
     scroll-snap-align: center;
     border-radius: 20px;
     overflow: hidden;
     position: relative;
+    padding: 0.5rem;
+    background: white;
 }
 
 .carousel-slide img {
-    width: 100%;
+    width: auto;
     height: auto;
-    object-fit: contain;
+    max-width: 100%;
     display: block;
     cursor: pointer;
 }
