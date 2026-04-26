@@ -296,14 +296,13 @@ main {
 
 .carousel-slide {
     flex: 0 0 auto;
-    width: 100%;
-    max-width: 520px;
+    width: auto;
     scroll-snap-align: center;
     border-radius: 20px;
     overflow: hidden;
     position: relative;
-    padding: 0.5rem;
-    background: white;
+    display: inline-block;
+    vertical-align: top;
 }
 
 .carousel-slide img {
@@ -322,9 +321,9 @@ main {
     width: 100%;
     background: linear-gradient(135deg, var(--pink), var(--pink-light));
     color: white;
-    padding: 5px;
+    padding: 4px;
     font-weight: 700;
-    font-size: 0.8rem;
+    font-size: 0.75rem;
     text-align: center;
     box-sizing: border-box;
 }
